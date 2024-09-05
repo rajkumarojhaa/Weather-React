@@ -1,0 +1,160 @@
+/* Base styles for all devices */
+.weather-app {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px; /* Added padding for small devices */
+  }
+  
+  .date-time {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .weather-card {
+    background: rgba(27, 27, 27, 0.7); /* Black glassy style */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+  
+  .search-section {
+    position: relative;
+  }
+  
+  .search-section input {
+    width: calc(100% - 70px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .search-section button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9800;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .suggestions-list {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    right: 0;
+    max-height: 150px;
+    background: rgba(0, 0, 0, 0.9);
+    overflow-y: auto;
+    border-radius: 5px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .suggestions-list li {
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .suggestions-list li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .weather-info h1 {
+    margin: 10px 0;
+    font-size: 24px;
+  }
+  
+  .weather-info p {
+    margin: 5px 0;
+  }
+  
+  /* Media Queries */
+  
+ /* Small Devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .search-section input {
+      width: calc(100% - 60px); /* Adjust width for smaller screens */
+    }
+  
+    .search-section button {
+      width: 60px; /* Adjust button size */
+      padding: 8px;
+    }
+  
+    .weather-card {
+      padding: 15px; /* Adjust padding */
+      margin: 20px 20px; /* Add margin from left and right */
+      height: auto; /* Adjust height to auto */
+      max-height: 80vh; /* Ensure card doesn't exceed 80% of viewport height */
+    }
+  
+    .weather-info h1 {
+      font-size: 20px; /* Adjust font size */
+    }
+  
+    .weather-info p {
+      font-size: 14px; /* Adjust font size */
+    }
+  }
+  
+  /* Medium Devices (tablets, 600px and up) */
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .search-section input {
+      width: calc(100% - 70px); /* Keep width consistent */
+    }
+  
+    .search-section button {
+      width: 70px; /* Adjust button size */
+      padding: 10px;
+    }
+  
+    .weather-card {
+      padding: 20px; /* Adjust padding */
+    }
+  
+    .weather-info h1 {
+      font-size: 22px; /* Adjust font size */
+    }
+  
+    .weather-info p {
+      font-size: 16px; /* Adjust font size */
+    }
+  }
+  
+  /* Large Devices (desktops, 1024px and up) */
+  @media only screen and (min-width: 1025px) {
+    .search-section input {
+      width: calc(100% - 80px); /* Adjust width for larger screens */
+    }
+  
+    .search-section button {
+      width: 80px; /* Adjust button size */
+      padding: 12px;
+    }
+  
+    .weather-card {
+      padding: 25px; /* Adjust padding */
+    }
+  
+    .weather-info h1 {
+      font-size: 24px; /* Adjust font size */
+    }
+  
+    .weather-info p {
+      font-size: 18px; /* Adjust font size */
+    }
+  }
+  

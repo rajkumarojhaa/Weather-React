@@ -208,7 +208,7 @@ const WeatherApp = () => {
 
   const searchWeather = async (selectedCity = city) => {
     try {
-      const API_KEY = 'bb6c37b33e67c17932fe6e78678dd942';
+      const API_KEY = process.env.REACT_APP_API_KEY;
       const response = await axios.get(
         `https://api.openweathermap.org/data/2.5/weather?q=${selectedCity}&appid=${API_KEY}&units=metric`
       );
